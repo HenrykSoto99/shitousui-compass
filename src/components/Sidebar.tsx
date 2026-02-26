@@ -17,6 +17,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 import { useAuth } from '@/contexts/AuthContext';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useState } from 'react';
+import logoShitoushui from '@/assets/logo-shitoushui.jpg';
 
 interface NavItem {
   href: string;
@@ -90,9 +91,7 @@ export function Sidebar() {
           {/* Logo */}
           <div className="p-6 border-b border-sidebar-border">
             <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">S</span>
-              </div>
+              <img src={logoShitoushui} alt="Shitoushui Logo" className="w-10 h-10 rounded-lg object-cover" />
               <div>
                 <h1 className="font-bold text-lg text-sidebar-foreground">Shitoushui</h1>
                 <p className="text-xs text-muted-foreground">CRM Inmobiliario</p>

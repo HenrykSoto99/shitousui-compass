@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useAuth } from '@/contexts/AuthContext';
+import logoShitoushui from '@/assets/logo-shitoushui.jpg';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -41,9 +42,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-orange-400 flex items-center justify-center mb-4">
-            <span className="text-3xl font-bold text-white">S</span>
-          </div>
+          <img src={logoShitoushui} alt="Shitoushui Logo" className="mx-auto w-20 h-20 rounded-xl object-cover mb-4" />
           <CardTitle className="text-2xl">Shitoushui CRM</CardTitle>
           <CardDescription>Ingresa a tu cuenta para continuar</CardDescription>
         </CardHeader>
